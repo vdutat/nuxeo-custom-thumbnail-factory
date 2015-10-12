@@ -3,7 +3,7 @@
 
   <extension target="org.nuxeo.ecm.core.api.thumbnail.ThumbnailService"
     point="thumbnailFactory">
-    <thumbnailFactory name="customDocumentFactory"
+    <thumbnailFactory name="SUPNXP-14786_doc_imdc_user_ThumbnailFactory"
       docType="SUPNXP-14786_doc_imdc_user"
       factoryClass="org.nuxeo.ecm.platform.thumbnail.factories.CustomThumbnailFactory" />
   </extension>
