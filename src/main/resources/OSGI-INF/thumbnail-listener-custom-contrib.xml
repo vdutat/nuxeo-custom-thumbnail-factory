@@ -1,0 +1,14 @@
+<component name="org.nuxeo.ecm.platform.thumbnail.listener.custom">
+
+  <extension target="org.nuxeo.ecm.core.event.EventServiceComponent"
+    point="listener">
+
+    <listener name="checkCustomBlobUpdate" async="false" postCommit="false"
+      class="org.nuxeo.ecm.platform.thumbnail.listener.CustomCheckBlobUpdateListener"
+      priority="999">
+      <event>documentCreated</event>
+      <event>beforeDocumentModification</event>
+    </listener>
+  </extension>
+
+</component>

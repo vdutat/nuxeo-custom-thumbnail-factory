@@ -7,4 +7,4 @@ Bundle-Vendor: Nuxeo
 Bundle-Version: 1.0.qualifier
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: nuxeo-custom-thumbnail-factory
-Nuxeo-Component: OSGI-INF/thumbnail-factories-contrib.xml
+Nuxeo-Component: OSGI-INF/thumbnail-listener-custom-contrib.xml
