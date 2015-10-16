@@ -11,7 +11,7 @@ Use this option if you consider that the original blob can be used "as it is" to
 
 #### Contribution to `thumbnailFactory`
 
-Consider `DocType1` being the document type for which you want to render in the `thumbnail` view:
+Consider `DocType1` being the document type for which you want to render a thumbnail image in the `thumbnail` view:
 
 ```xml
 <extension target="org.nuxeo.ecm.core.api.thumbnail.ThumbnailService"
@@ -24,7 +24,7 @@ Consider `DocType1` being the document type for which you want to render in the 
 
 #### Configuration variable in `nuxeo.conf`
 
-Consider `DocType1` being the document type and `schema1:image` being the `Blob` metadata for which you want to render in the `thumbnail` view:
+Consider `DocType1` being the document type and `schema1:image` being the `Blob` metadata for which you want to render a thumbnail image in the `thumbnail` view:
 
 ```
 nuxeo.thumbnail.DocType1.metadata=schema1:image
@@ -37,7 +37,9 @@ Use this option if you need to transform the original blob and store the resulti
 
 #### Contribution to `BlobHolderFactory`
 
-Consider `DocType1` being the document type for which you want to render in the `thumbnail` view:
+Contribute a `BlobHolderFactory` for your custom document type as the `thumbnail service` relies on it to retrieve the source blob to generate the `thumbnail` image.
+
+Consider `DocType1` being the document type for which you want to render a thumbnail image in the `thumbnail` view:
 
 ```xml
 <extension target="org.nuxeo.ecm.core.api.blobholder.BlobHolderAdapterComponent"
@@ -50,7 +52,7 @@ Consider `DocType1` being the document type for which you want to render in the 
 
 #### Contribution to `thumbnailFactory`
 
-Consider `DocType1` being the document type for which you want to render in the `thumbnail` view:
+Consider `DocType1` being the document type for which you want to render a thumbnail image in the `thumbnail` view:
 
 ```xml
 <extension target="org.nuxeo.ecm.core.api.thumbnail.ThumbnailService"
