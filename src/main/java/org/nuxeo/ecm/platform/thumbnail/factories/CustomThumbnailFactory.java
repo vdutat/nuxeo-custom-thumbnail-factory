@@ -33,6 +33,7 @@ import org.nuxeo.ecm.core.api.impl.blob.FileBlob;
 import org.nuxeo.ecm.core.api.thumbnail.ThumbnailFactory;
 import org.nuxeo.ecm.platform.thumbnail.ThumbnailConstants;
 import org.nuxeo.runtime.api.Framework;
+import org.nuxeo.runtime.services.config.ConfigurationService;
 
 public class CustomThumbnailFactory implements ThumbnailFactory {
 
@@ -40,7 +41,7 @@ public class CustomThumbnailFactory implements ThumbnailFactory {
 
     @Override
     public Blob getThumbnail(DocumentModel doc, CoreSession session) {
-        String propertyName = Framework.getProperty("nuxeo.thumbnail." + doc.getType() + ".metadata", ThumbnailConstants.THUMBNAIL_PROPERTY_NAME);
+        String propertyName = Framework.getService(ConfigurationService.class).getProperty("nuxeo.thumbnail." + doc.getType() + ".metadata", ThumbnailConstants.THUMBNAIL_PROPERTY_NAME);
 //        propertyName = "SUPNXP-14786_sch_imdc_user:photo";
         Blob thumbnailBlob = null;
         try {
